@@ -1,11 +1,60 @@
 * Using processing.py from the command line (or babel)
 [[file:~/repos/processing-py-site/Tutorials/command-line/][file:~/repos/processing-py-site/Tutorials/command-line/]]
-#+begin_src sh
+#+begin_src sh :results silent
 java -jar processing-py.jar mouse_follow.py
 
 #+end_src
 
+
+#+begin_src sh :results silent
+java -jar processing-py.jar /Users/ao/repos/pyprocessing/examples-py/simple_noisefield.py
+#+end_src
+
+#+begin_src clojure 
+
+#+end_src
+
+#+begin_src sh :results silent :var file
+
+#+end_src
+
+
+#+BEGIN_SRC ipython :session :results value raw
+import os
+os.chdir("/Users/ao/repos/pyprocessing/")
+os.listdir('.')
+#+END_SRC
+
 #+RESULTS:
+# Out[23]:
+#+BEGIN_EXAMPLE
+  ['.git',
+  'examples-py',
+  'FiveWaysOfWritingText.py',
+  'HelloWorld.class',
+  'HelloWorld.java',
+  'mouse_follow.py',
+  'processing-py.jar',
+  'py-site-docs',
+  'python-mode-examples',
+  'README.org']
+#+END_EXAMPLE
+
+#+BEGIN_SRC ipython :session
+files =  os.listdir('/Users/ao/repos/pyprocessing/examples-py/')
+#+END_SRC
+
+#+RESULTS:
+: # Out[25]:
+
+#+BEGIN_SRC ipython :session :results value raw
+files[2]
+#+END_SRC
+
+#+RESULTS:
+# Out[28]:
+: 'anchors.py'
+
 * Calling java from org-babel
 #+HEADERS: :classname HelloWorld 
 #+begin_src java  :results output :exports both
